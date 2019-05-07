@@ -9,6 +9,7 @@ def get_first_name_of_season_winner(data, season)
 	  value.each{ |array| 
 	   if array["status"]=="Winner"
 	     nameWinner==array["name"]
+	   end
 	  }	
 	 end
   }
