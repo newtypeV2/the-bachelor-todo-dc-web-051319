@@ -3,12 +3,21 @@ require "pry"
 
 def get_first_name_of_season_winner(data, season)
   # code here
-  data.fetch(season).find{|profile| profile["status"]=="Winner"}.fetch("name").split(" ").first
+  data.each{ |key, value|
+	  value.each{ |array| 
+		  array.each{|k,v|
+		  if k=="hometown" && v==hometown
+		  hometownCount+=1
+		  end
+		  } 
+	  }	
+  }
+  #data.fetch(season).find{|profile| profile["status"]=="Winner"}.fetch("name").split(" ").first
 end
 
 def get_contestant_name(data, occupation)
   # code here
-  data.values.flatten!.find{|x| x.fetch("occupation")==occupation}.fetch("name")
+  #data.values.flatten!.find{|x| x.fetch("occupation")==occupation}.fetch("name")
 end
 
 def count_contestants_by_hometown(data, hometown)
