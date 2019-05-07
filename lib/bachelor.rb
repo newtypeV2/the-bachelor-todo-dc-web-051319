@@ -8,7 +8,7 @@ def get_first_name_of_season_winner(data, season)
   if key==season
 	  value.each{ |array| 
 	   if array["status"]=="Winner"
-	   nameWinner==array["name"]
+	   nameWinner=array["name"]
 	   binding.pry
 	   end
 	  }	
