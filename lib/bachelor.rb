@@ -3,15 +3,16 @@ require "pry"
 
 def get_first_name_of_season_winner(data, season)
   # code here
-  data.each{ |key, value|
+  nameWinner=""
+  data.each{ |key, value| 
+  if key==season
 	  value.each{ |array| 
-		  array.each{|k,v|
-		  if k=="hometown" && v==hometown
-		  hometownCount+=1
-		  end
-		  } 
+	   if array["status"]=="Winner"
+	     nameWinner==array["name"]
 	  }	
+	 end
   }
+  nameWinner.split(" ").first
   #data.fetch(season).find{|profile| profile["status"]=="Winner"}.fetch("name").split(" ").first
 end
 
