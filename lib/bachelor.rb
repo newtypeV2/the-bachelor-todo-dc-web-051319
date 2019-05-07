@@ -19,6 +19,15 @@ end
 
 def get_contestant_name(data, occupation)
   # code here
+  nameOccupation=""
+  data.each{ |key, value| 
+	  value.each{ |array| 
+	   if array["occupation"]==occupation
+	   nameOccupation=array["name"]
+	   end
+	  }	
+  }
+  nameWinner.split(" ").first
   #data.values.flatten!.find{|x| x.fetch("occupation")==occupation}.fetch("name")
 end
 
