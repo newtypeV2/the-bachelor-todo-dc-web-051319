@@ -27,7 +27,7 @@ def get_contestant_name(data, occupation)
 	   end
 	  }	
   }
-  nameWinner.split(" ").first
+  nameOccupation
   #data.values.flatten!.find{|x| x.fetch("occupation")==occupation}.fetch("name")
 end
 
